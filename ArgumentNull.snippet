@@ -1,0 +1,21 @@
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Argument Null Snippet</Title>
+      <Description>Code snippet checking for, and throwing an ArgumentNullException</Description>
+      <Shortcut>argnull</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Argument</ID>
+          <ToolTip>Replace with the name of the argument.</ToolTip>
+          <Default>ArgumentName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[if($Argument$ == null) throw new ArgumentNullException("$Argument$");$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

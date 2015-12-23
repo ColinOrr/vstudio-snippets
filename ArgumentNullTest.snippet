@@ -1,0 +1,38 @@
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Argument Null Unit Test Snippet</Title>
+      <Description>Code snippet for an ArgumentNullException test method</Description>
+      <Shortcut>testnull</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Subject</ID>
+          <ToolTip>Replace with the object under test.</ToolTip>
+          <Default>Subject</Default>
+        </Literal>
+        <Literal>
+          <ID>Method</ID>
+          <ToolTip>Replace with the name of the method.</ToolTip>
+          <Default>MethodName</Default>
+        </Literal>
+        <Literal>
+          <ID>Argument</ID>
+          <ToolTip>Replace with the name of the argument.</ToolTip>
+          <Default>ArgumentName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[class when_I_call_$Method$_with_no_$Argument$ : Context
+	  {
+        It throws_an_ArgumentNullException = () =>
+        {
+            var exception = Catch.Exception(() => $end$);
+            exception.ShouldBeOfType<ArgumentNullException>();
+        };
+	  }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
