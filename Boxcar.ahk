@@ -1,5 +1,6 @@
 <^>!Enter::
     Clipboard := ""
+    Send {END}
     Send {SHIFTDOWN}{HOME}
     Send, ^c
     ClipWait
