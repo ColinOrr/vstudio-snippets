@@ -25,13 +25,14 @@
       </Declarations>
       <Code Language="CSharp">
         <![CDATA[class when_I_call_$Method$_with_no_$Argument$ : Context
-	  {
+    {
         It throws_an_ArgumentNullException = () =>
         {
             var exception = Catch.Exception(() => $end$);
             exception.ShouldBeOfType<ArgumentNullException>();
+            exception.ShouldContainErrorMessage("$Argument$");
         };
-	  }]]>
+    }]]>
       </Code>
     </Snippet>
   </CodeSnippet>
