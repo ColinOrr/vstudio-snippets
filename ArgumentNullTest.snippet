@@ -30,6 +30,7 @@
         {
             var exception = Catch.Exception(() => $end$);
             exception.ShouldBeOfType<ArgumentNullException>();
+			exception.ShouldContainErrorMessage("$Argument$");
         };
 	  }]]>
       </Code>
